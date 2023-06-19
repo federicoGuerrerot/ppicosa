@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!-- Formato de codificacion -->
+    <meta charset="utf-8">
+
+    <!-- Caracteristicas basicas de proporcion con respecto al dispositivo -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <!-- Importar recursos css -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="/static/css/tagsinput.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha384-iBBgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjptBC+D+h7lK0l8WG2Y" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+    <title>Contador</title>
+
+</head>
+<body>
+<main>
+    <div class="flex">
+        <!-- Titulo bienvenida -->
+        <div class="container-fluid" style="height: 100vh; width: 100vw; background-color: aqua; color: black; text-align: center; padding-top: 40vh;">
+            <h1>Contador de clicks</h1>
+            <p>SI_08</p>
+            <!-- Superficie para dar clicks -->
+            <div class="container-fluid" id="contador" style="background-color: aquamarine; color: black; font-size: 100px; text-align: center; cursor: pointer;">
+                0
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Importar contenido JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script>
+        let contador = 0;
+        function sumar(){
+            contador++;
+            document.getElementById("contador").innerHTML = contador;
+            if(contador==1){
+                alert("CLICKEASTE 1 VEZ. ve a hacer otra cosa con tu vida")
+            }
+            if(contador==2){
+                alert("EN SERIO VAS A SEGUIR?")
+            }
+            if(contador==3){
+                alert("COMO BOBO TAMBIEN")
+            }
+            if(contador==4){
+                alert("YA HAGA LO QUE QUIERA")
+            }
+        }   
+        document.getElementById("contador").addEventListener("click", sumar);
+    </script>
+</main>    
+    
+</body>
+    
+</html>
